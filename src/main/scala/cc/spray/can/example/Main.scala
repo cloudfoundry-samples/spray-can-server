@@ -41,7 +41,6 @@ object Main extends App {
 
   // a running HttpServer can be bound, unbound and rebound
   // initially to need to tell it where to bind to
-  println("jen" + System.getenv("VCAP_APP_HOST"))
   server ! HttpServer.Bind(Option(System.getenv("VCAP_APP_HOST")).getOrElse("localhost"), Option(System.getenv("VCAP_APP_PORT")).getOrElse("8080").toInt)
 
   // finally we drop the main thread but hook the shutdown of
