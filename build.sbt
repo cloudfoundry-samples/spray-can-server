@@ -23,3 +23,5 @@ libraryDependencies ++= Seq(
     "cc.spray" % "spray-can" % "1.0-M1",
    "com.typesafe.akka" %   "akka-actor" % "2.0"
 )
+
+EclipseKeys.withSource := true
