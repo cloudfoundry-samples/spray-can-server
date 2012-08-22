@@ -2,3 +2,5 @@ dist
 target
 .classpath
 .project
+.cache
+.settings
