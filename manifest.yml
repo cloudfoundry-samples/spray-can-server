@@ -1,15 +1,8 @@
---- 
-applications: 
-  dist/simple-http-server/simple-http-server.zip: 
-    name: simple-http-server
-    framework: 
-      name: standalone
-      info: 
-        mem: 64M
-        description: Standalone Application
-        exec: 
-    runtime: java
-    command: java $JAVA_OPTS -jar simple-http-server_2.9.1-0.1.0-SNAPSHOT.jar
-    url: simple-http-server.${target-base}
-    mem: 512M
-    instances: 1
+---
+applications:
+- name: simple-http-server
+  memory: 512M
+  instances: 1
+  host: simple-http-server-${random-word}
+  domain: cfapps.io
+  path: dist/simple-http-server/simple-http-server.zip
